@@ -1,0 +1,24 @@
+def Multiplication(Value1,Value2):
+    Ans = 0   # Local variable
+    Ans = Value1 * Value2
+    return Ans
+
+
+No1 = 0
+No2 = 11
+Result = 0
+
+No1 = int(input("Enter first number: "))
+No2 = int(input("Enter second number: "))
+
+Result = Multiplication(No1,No2)
+print("Multiplication is:",Result)
+
+###############################################################################################
+
+
+No1 = int(input("Enter first number: "))
+No2 = int(input("Enter second numer: "))
+
+Result = Multiplication(No1,No2)
+print("Multiplication is:",Result)
