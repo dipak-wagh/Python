@@ -5,10 +5,8 @@ iCnt = 0
 def Update():
     global iCnt
 
-    for _ in range(200000):
+    for _ in range(2000000):
         iCnt = iCnt + 1
-
-
 
 def main():
     global iCnt
@@ -16,7 +14,7 @@ def main():
     Update()
     Update()
 
-    print("Value of iCnt is: ",iCnt)
+    print("Value of iCnt is : ",iCnt)
 
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
