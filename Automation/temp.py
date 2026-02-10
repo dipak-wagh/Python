@@ -1,41 +1,21 @@
-import os
+from MarvellousFMR import filterX, mapX, reduceX
 
-def DirectoryScanner(DirectoryName):
-    print("Contents of the directory are : ")
-
-    for FolderName, SubFolderName, FileName in os.walk(DirectoryName):
-        print("Folder name:",FolderName)
-
-        for subf in SubFolderName:
-            print("SubFolder name: ",subf)
-
-        for fname in FileName:
-            print("FileName is: ",fname)
+checkEven = lambda No: (No % 2 == 0)
+Increment = lambda No: (No + 1)
+Add = lambda A,B : A + B
 
 def main():
-    DirectoryName = input("Enter the name of Directory:")
+    Data = [11,10,12,20,24]
+    print("Actual Data is : ",Data)
 
-    DirectoryScanner(DirectoryName)
+    FData = list(filterX(CheckEven,Data))
+    print("Data After filter is : ",FData)
 
-if __name__ == "__main__":
-    main()
+    MData = list(mapX(Increment,FData))
+    print("Data After Map is : ",MData)
 
-
-
-
-
-
-
-
-
-
-
-def main():
-    DirectoryName = input("Enter the name of Directory")
-
-    DirectoryScanner(DirectoryName)
-
-
+    RData = reduceX(Add,MData)
+    print("Data after reduce is : ",RData)
 
 if __name__ == "__main__":
     main()

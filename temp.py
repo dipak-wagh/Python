@@ -1,21 +1,29 @@
-class Demo:
-    No=10
+def main():
+    Ans = 0
+    try:
+        print("Inside try")
 
-    def __init__(self,A,B):
-        self.value1 = A
-        self.value2 = B
-    
-    def fun(self):
-        print("Inside Instance method fun",self.value1,self.value2)
+        print("Enter first number:")
+        No1 = int(input())
 
-    @classmethod
-    def sun(cls):
-        print("Inside class method sun",cls.No)
+        print("Enter second number:")
+        No2 = int(input())
+        
+        Ans = No1 / No2
 
-Demo.sun()
-print("Class Variable No ",Demo.No)
+    except ZeroDivisionError as zobj:
+        print("Inside except : ",zobj)
 
-obj = Demo(11,21)
+    except ValueError as vobj:
+        print("Insode except : ",vobj)
 
-obj.fun()
-print("Instance Variable :",obj.value1,obj.value2)
+    except Exception as eobj:
+        print("Inside except : ",eobj)
+    finally:
+        print("Inside finally")
+
+    print("Divison is : ",Ans)    
+
+
+if __name__ == "__main__":
+    main()
